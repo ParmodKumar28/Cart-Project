@@ -1,0 +1,336 @@
+/* CSS Variables */
+:root {
+  --primary-color: #ff6b88;
+  --secondary-color: #ccc;
+  --background-color: #fefefe;
+  --text-color: #777;
+  --font-family: Arial, sans-serif;
+}
+
+/* Resetting default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Container styles */
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  position: relative;
+}
+
+/* Header styles */
+h1 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+/* Decorative lines for header */
+h1::before,
+h1::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 25%;
+  height: 1px;
+  background-color: var(--secondary-color);
+}
+
+h1::before {
+  left: 0;
+}
+
+h1::after {
+  right: 0;
+}
+
+/* Option box styles */
+.option-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid var(--secondary-color);
+  transition: all 0.3s ease;
+}
+
+/* Active option box styles */
+.option-box.active {
+  border-color: var(--primary-color);
+  background-color: #fff7f9;
+}
+
+/* Most popular tag styles */
+.most-popular {
+  position: absolute;
+  top: -12px;
+  right: -10%;
+  transform: translateX(-50%);
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1rem;
+  padding: 2px 10px;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+/* Option content styles */
+.option-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Price section styles */
+.price-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.price {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.strike-price {
+  text-decoration: line-through;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin-left: 10px;
+}
+
+.discount {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 2px 5px;
+  margin-left: 6px;
+  border-radius: 4px;
+}
+
+.standard-price {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin-top: 2px;
+  margin-left: 26px;
+}
+
+/* Selectors styles */
+.selectors {
+  display: none;
+  margin-top: 10px;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.selectors table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.selectors td {
+  padding: 5px;
+  vertical-align: middle;
+}
+
+.selectors label {
+  margin-right: 10px;
+}
+
+.selectors select {
+  padding: 8px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 4px;
+  outline: none;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.selectors select:hover,
+.selectors select:focus {
+  border-color: var(--primary-color);
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--primary-color);
+}
+
+/* Bottom section styles */
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0px;
+  font-weight: bold;
+}
+
+.bottom-section .free-delivery {
+  color: var(--primary-color);
+}
+
+.bottom-section .total-price {
+  font-size: 1.1rem;
+}
+
+/* Add to cart button styles */
+button.add-to-cart {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+button.add-to-cart:hover {
+  background-color: #e05c78;
+}
+
+/* Additional selectors styles */
+.selectors {
+  margin: 20px auto;
+  display: table;
+  width: 100%;
+  text-align: center;
+}
+
+.selectors > div {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  margin: 5px auto;
+  padding: 2px 0;
+}
+
+.selectors label {
+  margin-right: 10px;
+}
+
+.selectors select {
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: 2px solid var(--secondary-color);
+  background: #fff;
+  cursor: pointer;
+  outline: none;
+  border-radius: 4px;
+  width: 120px;
+}
+
+.selectors select:focus {
+  box-shadow: 0 0 5px var(--primary-color);
+}
+
+.option-box input[type="radio"]:checked + label {
+  color: var(--primary-color);
+}
+
+.option-box input[type="radio"]:checked {
+  accent-color: var(--primary-color);
+}
+
+.option-box input[type="radio"]:checked ~ .selectors {
+  display: block;
+}
+
+.add-to-cart span {
+  margin-right: 6px;
+  font-size: larger;
+}
+
+.add-to-cart span img {
+  width: 12px;
+  height: 12px;
+  color: white;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .option-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .price-section {
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  .most-popular {
+    font-size: 1rem;
+    padding: 3px 8px;
+  }
+
+  .selectors > div {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .selectors select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+
+  .strike-price {
+    font-size: 0.8rem;
+  }
+
+  .discount {
+    font-size: 0.8rem;
+  }
+
+  .standard-price {
+    font-size: 0.8rem;
+  }
+
+  .bottom-section .total-price {
+    font-size: 1rem;
+  }
+
+  button.add-to-cart {
+    font-size: 0.7rem;
+    padding: 10px;
+  }
+}

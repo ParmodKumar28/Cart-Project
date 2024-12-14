@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOGO Interactive Design</title>
+    <!-- Linking Style's -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>YAY! It’s BOGO</h1>
+      </header>
+
+      <main>
+        <!-- Option 1 -->
+        <section class="option-box" onclick="selectOption(1)">
+          <div class="option-content">
+            <div>
+              <input type="radio" name="unit" id="unit1" />
+              <label for="unit1"
+                ><strong>1 Unit</strong>
+                <span class="discount">10% Off</span></label
+              >
+              <p class="standard-price">Standard Price</p>
+            </div>
+            <div class="price-section">
+              <div class="price">$10.00 USD</div>
+              <div class="strike-price">$24.00 USD</div>
+            </div>
+          </div>
+          <div class="selectors">
+            <div>
+              <label>Size</label>
+              <label>Color</label>
+            </div>
+            <div>
+              <label>#1</label>
+              <select>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select>
+                <option>Black</option>
+                <option>Red</option>
+                <option>Blue</option>
+              </select>
+            </div>
+            <div>
+              <label>#2</label>
+              <select>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select>
+                <option>Black</option>
+                <option>Red</option>
+                <option>Blue</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <!-- Option 2 with Most Popular tag -->
+        <section class="option-box" onclick="selectOption(2)">
+          <div class="option-content">
+            <div>
+              <input type="radio" name="unit" id="unit2" />
+              <label for="unit2"
+                ><strong>2 Units</strong>
+                <span class="discount">20% Off</span></label
+              >
+              <p class="standard-price">Standard Price</p>
+            </div>
+            <div class="price-section">
+              <div class="price">$18.00 USD</div>
+              <div class="strike-price">$36.00 USD</div>
+            </div>
+          </div>
+          <div class="most-popular">Most Popular</div>
+          <div class="selectors">
+            <div>
+              <label>Size</label>
+              <label>Color</label>
+            </div>
+            <div>
+              <label>#1</label>
+              <select>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select>
+                <option>Black</option>
+                <option>Red</option>
+                <option>Blue</option>
+              </select>
+            </div>
+            <div>
+              <label>#2</label>
+              <select>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select>
+                <option>Black</option>
+                <option>Red</option>
+                <option>Blue</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <!-- Option 3 -->
+        <section class="option-box" onclick="selectOption(3)">
+          <div class="option-content">
+            <div>
+              <input type="radio" name="unit" id="unit3" />
+              <label for="unit3"
+                ><strong>3 Units</strong>
+                <span class="discount">30% Off</span></label
+              >
+              <p class="standard-price">Standard Price</p>
+            </div>
+            <div class="price-section">
+              <div class="price">$25.00 USD</div>
+              <div class="strike-price">$50.00 USD</div>
+            </div>
+          </div>
+          <div class="selectors">
+            <div>
+              <label>Size</label>
+              <label>Color</label>
+            </div>
+            <div>
+              <label>#1</label>
+              <select>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select>
+                <option>Black</option>
+                <option>Red</option>
+                <option>Blue</option>
+              </select>
+            </div>
+            <div>
+              <label>#2</label>
+              <select>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select>
+                <option>Black</option>
+                <option>Red</option>
+                <option>Blue</option>
+              </select>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Bottom Section -->
+      <footer class="bottom-section">
+        <div class="free-delivery">Free Delivery</div>
+        <div class="total-price">Total: $18.00 USD</div>
+      </footer>
+
+      <!-- Add to Cart -->
+      <button class="add-to-cart">
+        <span
+          ><img
+            src="https://cdn-icons-png.flaticon.com/128/748/748113.png"
+            alt=""
+        /></span>
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Linking Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
